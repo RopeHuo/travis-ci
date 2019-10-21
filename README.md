@@ -118,6 +118,6 @@ Travis 为上面这些阶段提供了7个钩子。
 
 上面代码表示`before_install`阶段要做两件事，第一件事是要更新依赖，第二件事是安装`express`。
 
-+++
+---
 
 参考文章：[http://www.ruanyifeng.com/blog/2017/12/travis_ci_tutorial.html](http://www.ruanyifeng.com/blog/2017/12/travis_ci_tutorial.html)
