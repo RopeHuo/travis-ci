@@ -62,6 +62,8 @@ node_js:
 
 上面代码中，`language`字段指定了默认运行环境，这里设定使用 node 环境。
 
+上面代码中，`node_js`字段用来指定 Node 版本，如果写node表示最新版本。
+
 `sudo`字段为false代表不需要`sudo`权限
 
 Travis 默认提供的运行环境，请参考[官方文档](https://docs.travis-ci.com/user/languages) 。目前一共支持31种语言，以后还会不断增加。
@@ -74,8 +76,6 @@ Travis 的运行流程很简单，任何项目都会经过两个阶段。
 > - script 阶段：运行脚本
 
 ### 4.1实例：Node 项目
-
-上面代码中，`node_js`字段用来指定 Node 版本，如果写node表示最新版本。
 
 Node 项目的`install`和`script`阶段都有默认脚本会自动执行，可以不写。
 
@@ -112,11 +112,23 @@ Travis 为上面这些阶段提供了7个钩子。
 
 > ```javascript
 > before_install:
->   - sudo npm update express
+>   - sudo npm update koa
 >   - sudo npm install express
 > ```
 
 上面代码表示`before_install`阶段要做两件事，第一件事是要更新依赖，第二件事是安装`express`。
+
+## 五、提交项目
+
+然后通过
+
+```shell
+git add ./
+git commit -m "travisCI"
+git push origin master
+```
+
+提交成功后，再到travis-cI官网查看结果就可以了，也可以看到它的执行过程。
 
 ---
 
