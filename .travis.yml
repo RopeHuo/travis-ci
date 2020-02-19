@@ -10,6 +10,6 @@ before_install:
 
 script:
   - parcel build ./hello.js
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - echo "hongyun16855" | docker login -u "rope" --password-stdin
   - docker build -t mufengsm/travis-ci:latest .
   - docker push mufengsm/travis-ci:latest
