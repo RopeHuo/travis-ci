@@ -1,4 +1,7 @@
 "use strict";
-module.exports = function hello(){
-	return 'Hello Node';
-};
+const Koa = require('koa');
+const app = new Koa();
+app.use((ctx, next) => {
+    ctx.response.body = 'hello world'
+})
+app.listen(3000);
