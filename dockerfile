@@ -1,10 +1,8 @@
 FROM node:8.4
-
-
-
-COPY ./index.html /root/docker_study/automation_pipeline_project/travis-ci
-
-EXPOSE 80
+COPY . /app
+WORKDIR /app
+RUN npm install --registry=https://registry.npm.taobao.org
+EXPOSE 3000
 
 
 
