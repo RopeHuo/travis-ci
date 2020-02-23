@@ -2,7 +2,7 @@
 const Koa = require('koa');
 const app = new Koa();
 app.use((ctx, next) => {
-    ctx.response.body = 'hello world'
+    ctx.response.body = 'hello docker'
 })
 module.exports = function(){
 	return 'Hello Node';
